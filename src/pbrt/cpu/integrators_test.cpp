@@ -140,7 +140,7 @@ std::vector<TestScene> GetScenes() {
         ConstantSpectrum Le(1);
         Float scale = 0.5 / SpectrumToPhotometric(&Le);
         Light areaLight = new DiffuseAreaLight(identity, MediumInterface(), &Le, scale,
-                                               sphere, nullptr, Image(), nullptr, false);
+                                               sphere, nullptr, &Image(), nullptr, false);
 
         std::vector<Light> lights;
         lights.push_back(areaLight);
